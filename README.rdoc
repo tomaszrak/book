@@ -1,0 +1,108 @@
+Migracja aplikacji napisanej w RoR 3.2 do 4.2
+
+------------------ Tworzenie aplikacji w RoR 3.2 -------------
+
+**** 1 ****
+
+W konsoli:    
+  rails _3.2.13_ new books
+W repozytorium - nazwa commitu:  
+  init
+
+Polecenie tworzy nowa aplikacje o nazwie books z uzyciem RoR w wersji 3.2.13
+
+**** 2 ****
+
+W konsoli:    
+  cd books
+  bundle install
+W repozytorium - nazwa commitu:  
+  bootstrap added to gemfile
+
+Do Gemfile zostal dodany bootstrap, wszystkie gemy zostaly zainstalowane
+
+**** 3 ****
+
+W konsoli: 
+  rails g scaffold book title:string author:string readDate:date rate:integer description:text
+  rake db:migrate
+W repozytorium - nazwa commitu:  
+  Books scaffold
+
+Dodano model, kontroler i widok dla ksiazek, zostala wykonana migracja do bazy danych
+
+**** 4 ****
+
+W repozytorium - nazwa commitu:  
+  bootstrap, new layout, new book views
+
+Bootstrap zostal dodany do stylow i javascriptu, zmieniono glowny widok oraz potrzebne widoki dla ksiazki
+
+**** 5 ****
+
+W repozytorium - nazwa commitu:  
+  root in routes, WORKING IN RoR 3.2
+
+Dodanie domyslnego widoku aplikacji w routes.rb
+
+************************** Po tych zmianach aplikacja poprawnie dziala w wersji RoR 3.2 i wyglada tak jak w prezentacji ************************
+
+------------------ Migracja aplikacji do RoR 4.2 -------------
+
+**** 1 ****
+W repozytorium - nazwa commitu: 
+  gemfile for RoR 4.2
+
+Zmiany w Gemfile.
+
+**** 2 ****
+
+W konsoli: 
+  bundle install
+W repozytorium - nazwa commitu: 
+  bundle install
+
+Instalacja zmian
+
+**** 3 ****
+
+W konsoli: 
+  rake rails:update
+W repozytorium - nazwa commitu: 
+  rake rails:update
+
+Upgrade plikow konfiguracyjnych
+
+**** 4 ****
+
+W repozytorium - nazwa commitu: 
+  new model
+
+Zmiana modelu books.rb
+
+**** 5 ****
+
+W repozytorium - nazwa commitu: 
+  new contoller
+
+Zmiana kontolera books_controller.rb
+
+**** 6 ****
+
+W repozytorium - nazwa commitu: 
+  routes
+
+Zmiana w pliku routes routes.rb
+
+**** 7 ****
+
+W repozytorium - nazwa commitu: 
+  gem responders, WORKING RoR 4.2
+
+Dodanie gemu 'responders' do Gemfile
+
+
+
+
+
+

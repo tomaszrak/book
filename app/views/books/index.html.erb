@@ -1,0 +1,25 @@
+<h1>Przeczytane książki</h1>
+<div class="container">
+  <div class="row">
+    <% @books.each do |book| %>
+        <div class="col-sm-3 col-md-3">
+          <div class="well">
+            <h2 class="text-warning"><%= book.title %></h2>
+            <p id="notice"><%= notice %></p>
+            <p><span class="label label-success"><%= book.author %></span></p>
+             <ul>
+              <li><b>Przeczytana:</b> <%= book.readDate %></li>
+              <li><b>Ocena:</b> <%= book.rate %></li>
+            </ul> 
+            <p><%= book.description %></p>
+          </div>
+        </div>
+   <% end %>
+  </div>
+</div>
+
+<br />
+
+
+
+

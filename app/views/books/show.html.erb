@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-md-3">
+      <div class="well">
+        <h2 class="text-muted"><%= @book.title %></h2>
+        <p id="notice"><%= notice %></p>
+        <p><span class="label label-default"><%= @book.author %></span></p>
+        <ul>
+          <li><b>Przeczytana:</b> <%= @book.readDate %></li>
+          <li><b>Ocena:</b> <%= @book.rate %></li>
+        </ul> 
+      <p><%= @book.description %></p>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Books</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body>
+
+<div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><%= link_to 'Wszystkie', books_path %></li>
+            <li role="presentation"><%= link_to 'Dodaj nową', new_book_path %></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Moje książki</h3>
+      </div>
+
+
+      <div class="row marketing">
+        <%= yield %>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; Aga 2014</p>
+      </footer>
+
+    </div>
+</body>
+ </html>
